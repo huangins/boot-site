@@ -1,0 +1,52 @@
+.uber{
+	&-odd {
+		background-color: black;
+	}
+	&-even {
+		background-image: url('img/tiny_grid.png');
+	}
+}
+.section-base {
+	text-align: center;
+}
+.section-small {
+	.section-base;
+	height:100px;
+	padding: 20px;
+}
+
+.v-align-mid {
+	vertical-align: middle;
+}
+.section-large {
+	.section-base;
+	height:500px;
+	padding: 20px;
+}
+
+.social-panel {
+	.panel-heading, .panel-footer{
+		text-align: center;		
+	}
+	.panel-body {
+		height: 200px;
+		display: table;
+	}
+}
+.panel-content {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	text-align: center;
+}
+
+.uber-btn-mix(@primary-color, @background-color, @border-color, @border-radius){
+	.button-variant(@primary-color; @background-color; @border-color);
+	border-radius: @border-radius;
+}
+.btn-uber-odd {
+	.uber-btn-mix(@primary-color:black, @background-color:white, @border-color:black, @border-radius:0);
+}
+.btn-uber-even {
+	.uber-btn-mix(@primary-color:white, @background-color:black, @border-color:white, @border-radius:0);
+}
